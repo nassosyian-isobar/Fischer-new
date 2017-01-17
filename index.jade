@@ -1,0 +1,697 @@
+doctype html
+//if IE
+html(lang="el")
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		meta(name='format-detection', content='telephone=no')
+		meta(property='og:title', content="Fischer. It's about taste.")
+		meta(property='og:description', content='Η εκλεπτυσμένη αισθητική της Γαλλίας και η μακροχρόνια παράδοση της Γερμανίας στη ζυθοποιία ενώνονται αρμονικά σε μία μπίρα Pilsener εξαιρετικής ποιότητας.')
+		meta(property='og:image', content='http://www.fischerbeer.gr/Content/Files/post_fischer_launch.jpg')
+		meta(property='og:type', content='website')
+		meta(property='og:url', content='http://www.fischerbeer.gr/')
+		title ΑΡΧΙΚΗ | FISCHER BEER 
+		link(href='Content/Css/styles.css', rel='stylesheet')
+		link(rel='stylesheet', href='Content/Css/print.css', media='print')
+		link(rel='stylesheet', href='Content/Css/responsive.css', media='screen, handheld, projection, tv')
+		link(rel='shortcut icon', href='/favicon.ico?v=1.1')
+		//- script.
+		//- 	(function(i, s, o, g, r, a, m) {
+		//- 		i['GoogleAnalyticsObject'] = r;
+		//- 		i[r] = i[r] || function() {
+		//- 		(i[r].q = i[r].q || []).push(arguments)
+		//- 		}, i[r].l = 1 * new Date();
+		//- 		a = s.createElement(o),
+		//- 		m = s.getElementsByTagName(o)[0];
+		//- 		a.async = 1;
+		//- 		a.src = g;
+		//- 		m.parentNode.insertBefore(a, m)
+		//- 	})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		//- 	ga('create', 'UA-79721570-1', 'auto');
+		//- 	ga('require', 'displayfeatures');
+		//- 	ga('send', 'pageview');
+	body
+		.main-loader-container
+			#loader-icon.main-loader
+		//- script(src='http://www.fischerbeer.gr/Scripts/8D5852D152AFF8B87A7822308CCADC3A/0/Common/Combined.js')
+		script(src='Scripts/Libraries/rAF.js')
+		script(src="Scripts/Libraries/jquery-1.11.3.min.js")
+		script(src="Scripts/Libraries/jquery-ui.min.js")
+		script(src="Scripts/Libraries/jquery.ui.touch-punch.min.js")
+		script(src="Scripts/Libraries/owl.carousel.min.js")
+		script(src="Scripts/Libraries/perfect-scrollbar.jquery.min.js")
+		script(src="Scripts/Libraries/device.min.js")
+		script(src="Scripts/Libraries/bodymovin.js")
+		script(src="Scripts/Scripts/common.js")
+		script(src='Scripts/Libraries/jquery.unobtrusive-ajax.min.js')
+		.body-wrapper
+			#replaceMeAgeGate(data-value='True')
+				form#form0(action='/', data-ajax='true', data-ajax-mode='replace-with', data-ajax-update='#replaceMeAgeGate', data-ajax-url='/ajax/Isobar.Fischer.Frontend.Components.AgeGate.Index', method='post')
+					.lightbox.age-gating(data-lb-content='age-gating')
+						.lightbox-bg
+						.lightbox-container
+							.lightbox-content
+								span.icon-fischer-logo
+								span.line
+								p.title ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ
+								.field
+									input#Day.dmy.text-box.single-line(data-nextfield='#Month', data-val='true', data-val-maxlength='Validator_MaxLength', data-val-maxlength-max='2', data-val-regex='Validator_RegularExpression', data-val-regex-pattern='^\d{2}$', data-val-required='Το πεδίο είναι υποχρεωτικό', maxlength='2', name='Day', placeholder='HH', type='text', value='')
+									input#Month.dmy.text-box.single-line(data-nextfield='#Year', data-val='true', data-val-maxlength='Validator_MaxLength', data-val-maxlength-max='2', data-val-regex='Validator_RegularExpression', data-val-regex-pattern='^\d{2}$', data-val-required='Το πεδίο είναι υποχρεωτικό', maxlength='2', name='Month', placeholder='ΜΜ', type='text', value='')
+									input#Year.text-box.single-line(data-val='true', data-val-maxlength='Validator_MaxLength', data-val-maxlength-max='4', data-val-regex='Validator_RegularExpression', data-val-regex-pattern='^\d{4}$', data-val-required='Το πεδίο είναι υποχρεωτικό', maxlength='4', name='Year', placeholder='ΕΕΕΕ', type='text', value='')
+									p.error
+										span.field-validation-valid(data-valmsg-for='Month', data-valmsg-replace='true')
+								p
+									| YΠΟΒΑΛΛΟΝΤΑΣ ΑΥΤΗ ΤΗ ΦΟΡΜΑ, ΑΠΟΔΕΧΕΣΤΕ ΤΗΝ
+									br
+									|  ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ ΚΑΙ ΤΑ COOKIES ΑΥΤΟΥ ΤΟΥ
+									br
+									|  ΙΣΤΟΤΟΠΟΥ. ΑΥΤΟΣ Ο ΙΣΤΟΤΟΠΟΣ ΘΑ ΧΡΗΣΙΜΟΠΟΙΕΙ COOKIES.
+								button.btn.btn-more(type='submit')
+									span.bg
+									span ΕΙΣΟΔΟΣ
+									span.icon-arrow-right
+			// MAIN MENU
+			span.nav-trigger
+				#menu-icon
+					#menu-animatic
+				span.menu-open
+					span.first
+					span.second
+					span.txt ΜΕΝΟΥ
+				// /menu-open
+				span.mobile-logo
+					a.mobile-logo-link(href='#')
+						h1
+							span.icon-cathedral
+				span.menu-close
+					span.icon-close
+				// /menu-close
+			// /nav-trigger
+			nav.main-nav
+				ul.main-menu
+					li
+						a(href='/', title='ΑΡΧΙΚΗ | FISCHER BEER ') ΑΡΧΙΚΗ | FISCHER BEER 
+					li
+						a#inactiveMenuLink(href='#', title='ITS ABOUT TASTE') ITS ABOUT TASTE
+						ul.submenu
+							li
+								a(href='/enjoypage/', title='Η ΑΠΟΛΑΥΣΗ ΜΙΑΣ PILSENER') Η ΑΠΟΛΑΥΣΗ ΜΙΑΣ PILSENER
+							li
+								a(href='/origins/', title='Η ΙΣΤΟΡΙΑ ΤΗΣ FISCHER') Η ΙΣΤΟΡΙΑ ΤΗΣ FISCHER
+					li
+						a(href='/product/', title='ΠΡΟΪΟΝ') ΠΡΟΪΟΝ
+					li
+						a(href='/newslist/', title='NEA/ΔΙΑΓΩΝΙΣΜΟΙ') NEA/ΔΙΑΓΩΝΙΣΜΟΙ
+					li
+						a(href='/fischertastelist/', title='Fischer Tastes') Fischer Tastes
+					li
+						a(href='/contact/', title='ΕΠΙΚΟΙΝΩΝΙΑ') ΕΠΙΚΟΙΝΩΝΙΑ
+			// /main-nav
+			a.main-logo(href='/')
+				h1
+					span.icon-fischer-logo
+			script.
+				$(document).ready(function() {
+					$('#inactiveMenuLink').click(function(e) {
+					e.preventDefault();
+					});
+				});
+			// SECTION NAVIGATION
+			.section-nav
+				// you place the current page here
+				span ΑΡΧΙΚΗ
+				ul
+					li.active(data-section-trigger='1')
+						span 1
+					li(data-section-trigger='2')
+						span 2
+					li(data-section-trigger='3')
+						span 3
+					li(data-section-trigger='4')
+						span 4
+					li(data-section-trigger='5')
+						span 5
+			// /section-nav
+			// INTRO GAME
+			section.intro-game.open.anim-elm.anim-section(data-section='1', data-section-title='ΑΡΧΙΚΗ')
+				#progressWrapper.progressWrapper
+					.container
+						canvas#circularProgressStepCanvas
+						.indicator
+							// <span id="nInd">0</span><span>/</span><span id="tInd">6</span>
+							span#nInd 0
+							span /
+							span#tInd 6
+						#paging.paging
+							button#arrowL.arrow.left
+								svg(width='60px', height='80px', viewbox='0 0 50 80', xml:space='preserve')
+									polyline(fill='none', stroke='#78766c', stroke-width='1', stroke-linecap='round', stroke-linejoin='round', points='\
+									45.63,75.8 0.375,38.087 45.63,0.375 ')
+							button#arrowR.arrow.right
+								svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='60px', height='80px', viewbox='0 0 50 80', xml:space='preserve')
+									polyline(fill='none', stroke='#78766c', stroke-width='1', stroke-linecap='round', stroke-linejoin='round', points='\
+									0.375,0.375 45.63,38.087 0.375,75.8 ')
+						.game-msg
+							| ΒΑΛΕ ΤΗΝ ΙΣΤΟΡΙΑ
+							br
+							|  ΣΤΗ ΣΩΣΤΗ ΣΕΙΡΑ
+						span.icon-fischer-logo
+
+				#tile-game
+					img.one-big-pic(src='Content/Files/intro-game/fullpic.jpg' style="display:none")
+					//- img(src='Content/Files/intro-game/fullpic.jpg' style="display:none")
+					//- img(src='Content/Files/intro-game/fullpic.jpg' style="display:none")
+					//- img(src='Content/Files/intro-game/fullpic.jpg' style="display:none")
+					//- img(src='Content/Files/intro-game/fullpic.jpg' style="display:none")
+					//- img(src='Content/Files/intro-game/fullpic.jpg' style="display:none")
+					//- img(src='Content/Files/intro-game/fullpic.jpg' style="display:none")
+					.tile-wrapper
+						- for (var i = 0; i < 6; i++)
+							.tile(class="tile#{i+1}")
+								.corner-top-left
+								.corner-bottom-right
+								// canvas
+								// h3 #{i}
+
+					// #bodymovin-wrapper
+
+				.tiles-container
+					// .tiles-container-inner
+					// 	.tile-box(data-tile='0')
+					// 		.corner-top-left
+					// 		.corner-bottom-right
+					// 		figure.intro-game-tile(data-tile='0')
+					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/01.jpg', data-desktop-src='/Content/Files/intro-game/tiff/01.jpg', src='/Content/Files/intro-game/tiff/01.jpg', alt='')
+					// 	// /tile-box
+					// 	.tile-box(data-tile='1')
+					// 		.corner-top-left
+					// 		.corner-bottom-right
+					// 		figure.intro-game-tile(data-tile='1')
+					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/02.jpg', data-desktop-src='/Content/Files/intro-game/tiff/02.jpg', src='/Content/Files/intro-game/tiff/02.jpg', alt='')
+					// 	// /tile-box
+					// 	.tile-box(data-tile='2')
+					// 		.corner-top-left
+					// 		.corner-bottom-right
+					// 		figure.intro-game-tile(data-tile='2')
+					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/03.jpg', data-desktop-src='/Content/Files/intro-game/tiff/03.jpg', src='/Content/Files/intro-game/tiff/03.jpg', alt='')
+					// 	// /tile-box
+					// 	.tile-box(data-tile='3')
+					// 		.corner-top-left
+					// 		.corner-bottom-right
+					// 		figure.intro-game-tile(data-tile='3')
+					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/04.jpg', data-desktop-src='/Content/Files/intro-game/tiff/04.jpg', src='/Content/Files/intro-game/tiff/04.jpg', alt='')
+					// 	// /tile-box
+					// 	.tile-box(data-tile='4')
+					// 		.corner-top-left
+					// 		.corner-bottom-right
+					// 		figure.intro-game-tile(data-tile='4')
+					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/05.jpg', data-desktop-src='/Content/Files/intro-game/tiff/05.jpg', src='/Content/Files/intro-game/tiff/05.jpg', alt='')
+					// 	// /tile-box
+					// 	.tile-box(data-tile='5')
+					// 		.corner-top-left
+					// 		.corner-bottom-right
+					// 		figure.intro-game-tile(data-tile='5')
+					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/06.jpg', data-desktop-src='/Content/Files/intro-game/tiff/06.jpg', src='/Content/Files/intro-game/tiff/06.jpg', alt='')
+					// 	// /tile-box
+					span.skip
+						span SKIP
+					// HOMEPAGE AUDIO
+					// CUSTOM MEDIA PLAYER
+					// /media
+			// /intro-game
+			// ORIGIN
+			section.origin.anim-elm.anim-section(data-section='2', data-section-title='Η ΠΡΟΕΛΕΥΣΗ')
+				.wrapper
+					.row
+						.col.col-6
+							h3 Η ΠΡΟΕΛΕΥΣΗ
+							p
+								| Η εκλεπτυσμένη αισθητική της Γαλλίας και η μακροχρόνια παράδοση της Γερμανίας στη ζυθοποιία ενώνονται αρμονικά σε μία μπίρα Pilsener εξαιρετικής ποιότητας, με σπουδαία κληρονομιά και ξεχωριστό χαρακτήρα. Μια Pilsener που μαρτυρά την ιδιαίτερη αλσατική καταγωγή της, ακόμα και από τον καθεδρικό ναό του Στρασβούργου, στην περίτεχνη συσκευασία της.
+							a.btn.btn-default.btn-dark-green(title='ΠΕΡΙΣΣΟΤΕΡΑ', href='/origins/')
+								span.bg
+								span ΠΕΡΙΣΣΟΤΕΡΑ
+						.col.col-6.beer-cans
+							.cans-wrapper
+								.beer-can.right
+									img(src="Content/Media/can-right.png")
+								.beer-can.left
+									img(src="Content/Media/can-left.png")
+							// figure
+							// 	img(src='Content/Media/fischer-cans.png', alt='fischer beer cans', title='Fischer')
+						// /col
+					// /row
+				// /wrapper
+				.origin-polygonal
+					.triangle-down-left
+					.map
+						.reveal-mask(data-mask='0' data-lag='1500' data-scale='1')
+							img(src='Content/Media/map.jpg', alt='strasburg map')
+						span.country ΓΑΛΛΙΑ
+						span.strasburg
+							| ΣΤΡΑΣΒΟΥΡΓΟ
+							span.icon-strasburg
+					// /map
+					.wrapper
+						.origin-txt-container
+							.origin-txt-row
+								span.icon-box
+									span.icon-cathedral
+								// /icon-box
+								span.txt ΚΑΘΕΔΡΙΚΟΣ ΝΑΟΣ
+							// /origin-txt-row
+							.origin-txt-row
+								span.icon-box
+									span.icon-emblems.svg-bg-icon
+								// /icon-box
+								span.txt ΑΛΣΑΤΙΚΑ ΕΜΒΛΗΜΑΤΑ
+							// /origin-txt-row
+							.origin-txt-row
+								span.icon-box
+									span.icon-signature.svg-bg-icon
+								// /icon-box
+								span.txt ΥΠΟΓΡΑΦΗ ΙΔΡΥΤΗ
+							// /origin-txt-row
+							.origin-txt-row
+								span.icon-box
+									span.icon-origin-date.svg-bg-icon
+								// /icon-box
+								span.txt ΛΥΚΙΣΚΟΣ
+							// /origin-txt-row
+							.origin-txt-row
+								span.icon-box
+									span.icon-shield.svg-bg-icon
+								// /icon-box
+								span.txt ΑΛΣΑΤΙΚΗ ΑΣΠΙΔΑ
+							// /origin-txt-row
+						// /origin-txt-container
+					// /wrapper
+				// /origin-polygonal
+			// /origin
+			// INGREDIENTS
+			section.fischer-ingredients.anim-elm.anim-section(data-section='3', data-section-title='ΤΑ ΣΥΣΤΑΤΙΚΑ')
+				.wrapper
+					h3 ΤΑ ΣΥΣΤΑΤΙΚΑ
+					.content-box
+						.content-box-inner
+							p
+								| Αυτό που κάνει τη Fischer να ξεχωρίζει από τις υπόλοιπες Pilsener μπίρες είναι η διακριτική αρωματική γεύση και επίγευσή της. Το αρωματικό, πικρό προφίλ της αποδίδεται σε μια ειδική επιλογή αρωματικού λυκίσκου “aurora”, που συνδυάζεται με λεπτές νότες φρούτων και περγαμόντο, λεμονόχορτου, κίτρου και γλυκάνισου. Αποκλειστικά υψηλής ποιότητας πρώτες ύλες που εγγυώνται ότι κάθε γουλιά θα είναι μία απολαυστική εμπειρία. Μία γεύση που γίνεται αντιληπτή με όλες τις αισθήσεις.
+							a.btn.btn-default.btn-dark-green(href='/product/')
+								span.bg
+								span ΠΕΡΙΣΣΟΤΕΡΑ
+						// /content-box-inner
+					// /content-box
+					// beer
+					.elm.mob-visible
+						figure
+							img(src='Content/Media/fischer-bottle.png', alt='fischer bottle', title='')
+					// /col
+					.ingredients-container
+						.col
+							.ingredient-box.vini
+								figure
+									span.brush
+									.reveal-mask(data-mask='0' data-lag='300' data-scale='1')
+										img(src='Content/Media/ingredients/vini.png', alt='vini', title='')
+									span.icon-one
+										span.path1
+										span.path2
+								span.txt
+									p.title ΒΥΝΗ
+									p
+										| ΠΟΙΟΣ ΕΙΠΕ ΠΩΣ ΚΑΤΙ ΓΛΥΚΟ 
+										br
+										|  δεν μπορεί να είναι δυνατό;
+								// /txt
+							// /ingredient-box
+							.ingredient-box.water.mob-hidden
+								figure
+									span.brush
+									.reveal-mask(data-mask='0' data-lag='600' data-scale='1')
+										img(src='Content/Media/ingredients/water.png', alt='water', title='')
+									span.icon-three
+								span.txt
+									p.title ΝΕΡΟ
+									p
+										| ΟΤΑΝ ΚΑΤΙ ΠΟΥ ΔΕΝ ΦΑΝΤΑΖΕΣΑΙ 
+										br
+										|  σου δίνει αυτό που περιμένεις
+								// /txt
+							// /ingredient-box
+						// /col
+						// beer
+						.col.mob-hidden.col-beer
+							figure
+								img(src='Content/Media/fischer-bottle.png', alt='fischer bottle', title='')
+						// /col
+						.col
+							.ingredient-box.likiskos
+								figure
+									span.brush
+									.reveal-mask(data-mask='0' data-lag='900' data-scale='1')
+										img(src='Content/Media/ingredients/likiskos.png', alt='likiskos', title='')
+									span.icon-two
+								span.txt
+									p.title ΛΥΚΙΣΚΟΣ
+									p
+										| ΣΗΜΑΣΙΑ ΔΕΝ ΕΧΕΙ ΜΟΝΟ Η ΠΡΩΤΗ ΕΝΤΥΠΩΣΗ 
+										br
+										|  αλλά και η γεύση που σου μένει στο τέλος
+								// /txt
+							// /ingredient-box
+							.ingredient-box.water.desktop-hidden
+								figure
+									span.brush
+									.reveal-mask(data-mask='0' data-lag='1200' data-scale='1')
+										img(src='Content/Media/ingredients/water.png', alt='water', title='')
+									span.icon-three
+								span.txt
+									p.title ΝΕΡΟ
+									p
+										| ΟΤΑΝ ΚΑΤΙ ΠΟΥ ΔΕΝ ΦΑΝΤΑΖΕΣΑΙ 
+										br
+										|  σου δίνει αυτό που περιμένεις
+								// /txt
+							// /ingredient-box
+							.ingredient-box.magia
+								figure
+									span.brush
+									.reveal-mask(data-mask='0' data-lag='1500' data-scale='1')
+										img(src='Content/Media/ingredients/magia.png', alt='magia', title='')
+									span.icon-four
+								span.txt
+									p.title ΜΑΓΙΑ
+									p
+										| ΕΝΑ ΤΑΞΙΔΙ ΜΕ ΠΡΟΟΡΙΣΜΟ 
+										br
+										|  τη γεύση
+								// /txt
+							// /ingredient-box
+						// /col
+					// /ingredients-container
+				// /wrapper
+			// /fischer-ingredients
+			input#New-6(type='hidden', value='http://www.fischerbeer.gr/home/newslist/newdetail/oli-i-athina-ena-therino-sinema/')
+			input#New-7(type='hidden', value='http://www.fischerbeer.gr/home/newslist/newdetail/nea-emfanisi-idia-geusi/')
+			input#New-5(type='hidden', value='http://www.fischerbeer.gr/home/newslist/newdetail/international-film-festival-of-patmos-ioulios-2016/')
+			input#New-1(type='hidden', value='http://www.fischerbeer.gr/home/newslist/newdetail/fischer-its-about-taste/')
+			// FISCHER NEWS
+			section.fischer-news.anim-elm.anim-section(data-section='4', data-section-title='ΣΤΙΓΜΕΣ FISCHER')
+				.wrapper
+					.title
+						.title-inner.up-animation
+							h2 ΣΤΙΓΜΕΣ FISCHER
+							h6.after-heading
+								span ΝΕΑ &amp; EVENTS
+						// /title-inner
+					// /title
+					.news-box.main-news-box.up-animation
+						.col
+							figure(style='background-image: url(Content/Files/news/image_for_site_OAFF.jpg);')
+						// /col
+						.col
+							// span.badge.badge-rotation.badge-this-month
+							span.thebadge.the-badge-this-month
+								.sprite(data-frame-map='0' data-lag='1' data-duration='2' data-dimensions='110 110'): img(src='Content/Files/news/badge-atlas.png')
+							p.date
+								span.day 22
+								span.month IOYN.
+								span.year 2016
+							// /date
+							h4 ΟΛΗ Η ΑΘΗΝΑ ΕΝΑ ΘΕΡΙΝΟ ΣΙΝΕΜΑ!
+							.txt
+								| Για 6η χρονιά, η μεγαλύτερη κινηματογραφική γιορτή της Αθήνας επιστρέφει! Περισσότερες από 20 προβολές στα ομορφότερα...
+							.btn-row
+								a.btn.btn-more(href='http://www.fischerbeer.gr/home/newslist/newdetail/oli-i-athina-ena-therino-sinema/')
+									span ΠΕΡΙΣΣΟΤΕΡΑ 
+									span.icon-arrow-right
+								a.btn.btn-share(href='#')
+									span ΜΟΙΡΑΣΟΥ ΤΟ
+									span.icon-share(data-id='6')
+							// /btn-row
+						// /col
+					// /main-news-box
+					.news-container
+						.more-news.anim-elm
+							.col
+								.news-box
+									.col
+										.reveal-mask(data-mask='0' data-lag='1500' data-scale='1')
+											// img(style='background-image: url(Content/Files/news/december-posts.jpg);')
+											img(src='Content/Files/news/december-posts.jpg')
+										// figure(style='background-image: url(Content/Files/news/december-posts.jpg);')
+									// /col
+									.col
+										p.date
+											span.day 22
+											span.month IOYN.
+											span.year 2016
+										// /date
+										h4 ΝΕΑ ΕΜΦΑΝΙΣΗ, ΙΔΙΑ ΓΕΥΣΗ
+										.txt
+											| Από ανανεωμένο μπουκάλι και ολοκαίνουργιο κουτάκι απολαμβάνουμε πλέον την αγαπημένη μας μπίρα. Ο καθεδρικός ναός του...
+										.btn-row
+											a.btn.btn-more(href='http://www.fischerbeer.gr/home/newslist/newdetail/nea-emfanisi-idia-geusi/')
+												span ΠΕΡΙΣΣΟΤΕΡΑ
+												span.icon-arrow-right
+											a.btn.btn-share(href='#')
+												span ΜΟΙΡΑΣΟΥ ΤΟ
+												span.icon-share(data-id='7')
+										// /btn-row
+									// /col
+								// /news-box
+								.news-box
+									.col
+										figure(style='background-image: url(Content/Files/news/iffp_2015.jpg);')
+									// /col
+									.col
+										p.date
+											span.day 22
+											span.month IOYN.
+											span.year 2016
+										// /date
+										h4 INTERNATIONAL FILM FESTIVAL OF PATMOS, ΙΟΥΛΙΟΣ 2016
+										.txt
+											| Για μία ακόμα χρονιά το Διεθνές Φεστιβάλ Κινηµατογράφου Πάτµου και η Fischer µάς προσκαλούν σε ένα από τα πιο όµορφα...
+										.btn-row
+											a.btn.btn-more(href='http://www.fischerbeer.gr/home/newslist/newdetail/international-film-festival-of-patmos-ioulios-2016/')
+												span ΠΕΡΙΣΣΟΤΕΡΑ
+												span.icon-arrow-right
+											a.btn.btn-share(href='#')
+												span ΜΟΙΡΑΣΟΥ ΤΟ
+												span.icon-share(data-id='5')
+										// /btn-row
+									// /col
+								// /news-box
+							// /col
+							.col
+								.news-box
+									.col
+										figure(style='background-image: url(Content/Files/news/NEW_SPOT.png);')
+									// /col
+									.col
+										p.date
+											span.day 22
+											span.month IOYN.
+											span.year 2016
+										// /date
+										h4 IT'S ABOUT TASTE
+										.txt
+											| Δεν είναι η καταγωγή από την Αλσατία. Ούτε η σπουδαία κληρονομιά που μετράει δύο αιώνες. Δεν είναι η εμμονή στην...
+										.btn-row
+											a.btn.btn-more(href='http://www.fischerbeer.gr/home/newslist/newdetail/fischer-its-about-taste/')
+												span ΠΕΡΙΣΣΟΤΕΡΑ
+												span.icon-arrow-right
+											a.btn.btn-share(href='#')
+												span ΜΟΙΡΑΣΟΥ ΤΟ
+												span.icon-share(data-id='1')
+										// /btn-row
+									// /col
+								// /news-box
+							// /col
+						// /more=news
+						.row.center.up-animation
+							a.btn.btn-default(href='/newslist/')
+								span.bg
+								span ΟΛΑ ΤΑ ΝΕΑ
+						// /row center
+					// /news-container
+				// /wrapper
+			// /fischer-news
+			// FISCHER TASTES
+			section.fischer-tastes.anim-elm.anim-section(data-section='5', data-section-title='FISCHER TASTES')
+				.title
+					.title-inner.up-animation
+						h2 FISCHER TASTES
+						h6.after-heading
+							span Η FISCHER ΘΑ ΕΙΝΑΙ ΕΚΕΙ
+					// /title-innera
+				// /title
+				.animated-discs
+					.music-disc
+						img(src='Content/Media/disc.png', alt='disc')
+					.film-disc
+						img(src='Content/Media/pobina.png', alt='film disc')
+				// /animated-discs
+				.fischer-taste-container
+					a.fischer-taste.anim-elm(href='http://www.fischerbeer.gr/home/fischertastelist/fischertastedetail/festival-br-kinfou-br-thessalonikis/', title='ΦΕΣΤΙΒΑΛ  ΚΙΝ/ΦΟΥ  ΘΕΣΣΑΛΟΝΙΚΗΣ')
+						// figure(style='background-image: url(Content/Files/fischer-tastes/img2_black.jpg);', data-image='Content/Files/fischer-tastes/img2_black.jpg', data-alt-image='Content/Files/fischer-tastes/img2_color.jpg')
+						figure(style='background-image: url(Content/Files/fischer-tastes/img2_black.jpg);', data-image='Content/Files/fischer-tastes/img2_black.jpg')
+							.bg(style="background-image:url(Content/Files/fischer-tastes/img2_color.jpg)")
+							figcaption
+								span.icon-box
+									span.icon-ticket
+								// /icon-box
+								h4
+									| ΦΕΣΤΙΒΑΛ 
+									br
+									|  ΚΙΝ/ΦΟΥ 
+									br
+									|  ΘΕΣΣΑΛΟΝΙΚΗΣ
+								|  10 ΧΡΟΝΙΑ
+								br
+								| ΧΟΡΗΓΟΣ
+								br
+								| ΒΡΑΒΕΙΩΝ ΚΟΙΝΟΥ
+								span.num
+									span 1
+								// /num
+						// /fischer-taste
+					a.fischer-taste.anim-elm(href='http://www.fischerbeer.gr/home/fischertastelist/fischertastedetail/jazz-on-the-hill/', title='JAZZ  ON THE  HILL')
+						// figure(style='background-image: url(Content/Files/fischer-tastes/img_black.jpg);', data-image='Content/Files/fischer-tastes/img_black.jpg', data-alt-image='Content/Files/fischer-tastes/img_color.jpg')
+						figure(style='background-image: url(Content/Files/fischer-tastes/img_black.jpg);', data-image='Content/Files/fischer-tastes/img_black.jpg')
+							.bg(style="background-image:url(Content/Files/fischer-tastes/img_color.jpg)")
+							figcaption
+								span.icon-box
+									span.icon-saxophone
+								// /icon-box
+								h4
+									| JAZZ 
+									br
+									|  ON THE 
+									br
+									|  HILL
+								|  ΜΕΛΩΔΙΚΑ
+								br
+								|  ΤΑΞΙΔΙΑ
+								span.num
+									span 2
+								// /num
+						// /fischer-taste
+					a.fischer-taste.anim-elm(href='http://www.fischerbeer.gr/home/fischertastelist/fischertastedetail/festival-gallofonou-kinfou/', title='ΦΕΣΤΙΒΑΛ  ΓΑΛΛΟΦΩΝΟΥ  ΚΙΝ/ΦΟΥ')
+						figure(style='background-image: url(Content/Files/fischer-tastes/img3_black.jpg);', data-image='Content/Files/fischer-tastes/img3_black.jpg')
+							.bg(style="background-image:url(Content/Files/fischer-tastes/img3_color.jpg)")
+							figcaption
+								span.icon-box
+									span.icon-camera
+								// /icon-box
+								h4
+									| ΦΕΣΤΙΒΑΛ 
+									br
+									|  ΓΑΛΛΟΦΩΝΟΥ 
+									br
+									|  ΚΙΝ/ΦΟΥ
+								|  ΒΡΑΒΕΙΟ ΚΟΙΝΟΥ
+								br
+								| FISCHER ΜΕ
+								br
+								| ΕΥΡΩΠΑΪΚΟ ΑΕΡΑ
+								span.num
+									span 3
+								// /num
+						// /fischer-taste
+					a.btn.btn-default.btn-abs(href='/fischertastelist/')
+						span.bg
+						span ΟΛΕΣ ΟΙ ΧΟΡΗΓΙΕΣ
+				// /fischer-taste-container
+			// /fischer-tastes
+			footer.main-footer.anim-elm
+				// BACK TO TOP
+				span.back-top
+					span.inner
+						span.icon-arrow-up
+				// /back-top
+				.wrapper
+					.footer-box
+						.row
+							.col
+								h5 ΕΠΙΚΟΙΝΩΝΙΑ
+								address
+									| Λ. Κηφισού 107, Αιγάλεω
+									br
+									|  Τ. 801 22 20000
+							// /col
+							.col
+								h5 ΓΡΑΨΟΥ ΣΤΟ NEWSLETTER ΜΑΣ
+								.form.newsletter-form
+									#replaceMe
+										form#form1(action='/', data-ajax='true', data-ajax-mode='replace-with', data-ajax-update='#replaceMe', data-ajax-url='/ajax/Isobar.Fischer.Frontend.Components.Newsletter.Index', method='post')
+											.form-inner
+												.field
+													input#Email.text-box.single-line(data-val='true', data-val-email='To email δεν είναι έγκυρο', data-val-required='Το πεδίο είναι υποχρεωτικό', name='Email', placeholder='Γράψε το email σου', type='email', value='')
+													.errorMessage
+														span.field-validation-valid(data-valmsg-for='Email', data-valmsg-replace='true')
+												// /field
+												button.submit(type='submit')
+													// /submit
+													span.icon-arrow-right
+											// /form-inner
+								// /form
+							// /col
+							.col
+								h5 SOCIAL
+								a.social-link(title='Facebook', href='https://www.facebook.com/FischerBeerGreece/') Facebook
+								a.social-link(title='Youtube', href='https://www.youtube.com/user/FischerBeerGreece') Youtube
+								a.social-link(title='Instagram', href='https://www.instagram.com/fischerbeer') Instagram
+							// /col
+						// /row
+					// /footer-box
+					.copyright
+						.col
+							a(title='ΔΗΛΩΣΗ ΙΔΙΩΤΙΚΟΤΗΤΑΣ', href='/dilosi-idiotikotitas/') ΔΗΛΩΣΗ ΙΔΙΩΤΙΚΟΤΗΤΑΣ
+							a(title='COOKIES', href='/cookies/') COOKIES
+						// /col
+						.col
+							a(title='ΟΡΟΙ ΧΡΗΣΗΣ', href='/oroi-hrisis/') ΟΡΟΙ ΧΡΗΣΗΣ
+							a(title='SITEMAP', href='/sitemap/') SITEMAP
+							a(title='ΑΠΟΛΑΥΣΤΕ ΥΠΕΥΘΥΝΑ', href='/apolauste-upeuthuna/') ΑΠΟΛΑΥΣΤΕ ΥΠΕΥΘΥΝΑ
+						// /col
+					// /copyright
+				// /wrapper
+			// /main-footer
+		// /body-wrapper
+		// <script src='Scripts/Libraries/dat.gui.min.js'></script>
+
+		script(src='Scripts/Libraries/easeljs-0.8.1.min.js')
+		script(src='Scripts/Libraries/TweenMax.min.js')
+		// script(src='Scripts/Libraries/bodymovin_light.min.js')
+		script(src='Scripts/Libraries/CircularProgressStep.js')
+		script(src='Scripts/Libraries/radial-indicator.js')
+		script(src='Scripts/Scripts/homepage.js')
+		script(src='Scripts/Scripts/tilegame.js')
+		script.
+			closeAgeGating();
+		// script.
+		// 	function HideDescription() {
+		// 		setTimeout(function() {
+		// 			$('.game-msg').addClass("hidden");
+		// 		}, 2000);
+		// 	}
+		// 	var userHasPlayed = getCookie('userHasPlayed') === 'true';
+		// 	$(function() {
+		// 		$('body').on('click', '.intro-game .skip', function() {
+		// 			userHasPlayed = true;
+		// 			setCookie('userHasPlayed', true);
+		// 			$('.game-msg').fadeOut('slow');
+		// 		});
+		// 		if (userHasPlayed) {
+		// 			$('.game-msg').addClass("hidden");
+		// 			$('#audioPlayer .controls-stop').trigger('click');
+		// 			setTimeout(function() {
+		// 				$('.intro-game .skip').trigger('click');
+		// 			}, 400);
+		// 		}
+		// 		HideDescription();
+		// 	});
+		script.
+			$('#replaceMe form').attr('novalidate', "novalidate");

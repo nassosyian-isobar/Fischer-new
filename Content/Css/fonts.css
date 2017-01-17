@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'fischer-icons';
+    src:    url('../Fonts/fischer-icons.eot?kfdbc3');
+    src:    url('../Fonts/fischer-icons.eot?kfdbc3#iefix') format('embedded-opentype'),
+    url('../Fonts/fischer-icons.ttf?kfdbc3') format('truetype'),
+    url('../Fonts/fischer-icons.woff?kfdbc3') format('woff'),
+    url('../Fonts/fischer-icons.svg?kfdbc3#fischer-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'fischer-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'burford_rusticbook_black';
+    src: url('../Fonts/kimmy_design_-_burfordrusticbookblack-webfont.eot');
+    src: url('../Fonts/kimmy_design_-_burfordrusticbookblack-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/kimmy_design_-_burfordrusticbookblack-webfont.woff2') format('woff2'),
+    url('../Fonts/BurfordRusticBookBlack.woff') format('woff'),
+    url('../Fonts/kimmy_design_-_burfordrusticbookblack-webfont.ttf') format('truetype'),
+    url('../Fonts/kimmy_design_-_burfordrusticbookblack-webfont.svg#burford_rusticbook_black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../Fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/Gotham-Book.otf')  format('opentype'),
+    url('../Fonts/Gotham-Book.woff') format('woff'),
+    url('../Fonts/Gotham-Book.ttf')  format('truetype'),
+    url('../Fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamGreek-Bold';
+    src: url('../Fonts/GothamGreek-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/GothamGreek-Bold.otf')  format('opentype'),
+    url('../Fonts/GothamGreek-Bold.woff') format('woff'),
+    url('../Fonts/GothamGreek-Bold.ttf')  format('truetype'),
+    url('../Fonts/GothamGreek-Bold.svg#GothamGreek-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../Fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+    url('../Fonts/Gotham-Light.otf')  format('opentype'),
+    url('../Fonts/Gotham-Light.woff') format('woff'),
+    url('../Fonts/Gotham-Light.ttf')  format('truetype'),
+    url('../Fonts/Gotham-Light.svg#Gotham-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

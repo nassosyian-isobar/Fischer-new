@@ -1,0 +1,726 @@
+@import "compass"
+
+@import "utils"
+
+#progressWrapper
+	pointer-events: none
+
+#progressWrapper .game-msg
+	display: none
+
+#bodymovin-wrapper
+	display: block
+	position: absolute
+	left: 100px
+	top: 100px
+	width: 300px
+	height: 300px
+	z-index: 10
+	// pointer-events: none
+
+
+
+
+
+//==============================================================
+
+
+#menu-icon
+	display: block
+	opacity: 1
+	width: 60px
+	height: 30px
+	overflow: visible
+
+	canvas, #menu-animatic
+		pointer-events: none
+		position: absolute
+		z-index: -1
+		width: 300px !important
+		height: 153px !important
+		
+	canvas
+		left: -100px
+		top: -60px
+
+
+
+//==============================================================
+
+
+.beer-cans
+	height: 336px
+	opacity: 0
+
+	.cans-wrapper
+		display: inline-block
+		position: relative
+		width: 100%
+		height: 336px
+		max-width: 100%
+		// max-height: 100%
+
+		.beer-can
+			position: absolute
+			display: inline-block
+			// left: 213px
+			// top: 38px
+			left: 0
+			right: 0
+			width: 167px
+			height: 300px
+			+transform-style( preserve-3d )
+			// +transform( translate3d(-500px, 0px, 0px) )
+			
+			img
+				height: 300px
+				width: auto
+
+
+
++keyframes(beer-left-keyframes)
+	0%
+		+transform( translate3d(-500px, 0px, 0px) )
+		opacity: 0
+		+animation-timing-function( linear )
+	100%
+		+transform( translate3d(0px, 0px, 0px) )
+		opacity: 1
+		+animation-timing-function( linear )
+
++keyframes(beer-right-keyframes)
+	0%
+		+transform( translate3d(-500px, 0px, 0px) rotateZ(0deg) )
+		opacity: 0
+		+animation-timing-function( linear )
+	40%
+		+transform( translate3d(0px, 0px, 0px) rotateZ(0deg) )
+		opacity: 1
+		+animation-timing-function( cubic-bezier(0, 0, 0.325, 0.995) )
+	100%
+		+transform( translate3d(216px, 0px, 0px) rotateZ(-30deg) )
+		opacity: 1
+		+animation-timing-function( linear )
+
+.animated
+	.beer-cans
+		opacity: 1
+
+		.cans-wrapper
+
+			.beer-can
+				&.left
+					+animation( beer-left-keyframes 0.8s linear 0s 1 normal forwards )
+				&.right
+					+animation( beer-right-keyframes 2s linear 0s 1 normal forwards )
+				
+
+section.origin
+
+
+
+	//==============================
+	// Animated Triangle
+	.origin-polygonal
+		&:after
+			content: ''
+			width: 150%
+			height: 100%
+			display: block
+			position: absolute
+			top: 0
+			left: -10%
+			background: #eeedeb
+			+transition(all 1s 0.5s)
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			-webkit-backface-visibility: hidden
+			+transform-style( preserve-3d )
+			// the following did the trick to enable antialiasing on the rotated surface
+			outline: 1px solid transparent
+
+			.triangle-down-left
+				display: none
+
+
+	&.animated
+		.origin-polygonal
+			&:after
+				// +transform( translate3d(0, -100%, 0) rotateZ(30deg) )
+				+transform( translate3d(0, -81%, 0) rotateZ(8deg) )
+
+	//==============================
+
+	+keyframes(dash-keyframes)
+		0%
+			+transform( scaleX(0) )	
+		35%
+			+transform( scaleX(1.1) )	
+		70%
+			+transform( scaleX(0.6) )
+		100%
+			+transform( scaleX(1) )	
+	
+	.origin-polygonal .origin-txt-container .origin-txt-row .icon-box:after
+		width: 41px
+		opacity: 1
+		+transform( scaleX(0) )
+		+transition(0s)
+
+	// .origin-polygonal .origin-txt-container .origin-txt-row
+
+	// 	&:nth-child(n+0) .icon-box:after
+	// 		+animation-delay(0s)
+
+	// 	&:nth-child(n+1) .icon-box:after
+	// 		+animation-delay(1s)
+
+	// 	&:nth-child(n+2) .icon-box:after
+	// 		+animation-delay(2s)
+
+	// 	&:nth-child(n+3) .icon-box:after
+	// 		+animation-delay(3s)
+
+	// 	&:nth-child(n+4) .icon-box:after
+	// 		+animation-delay(4s)
+
+	// 	&:nth-child(n+5) .icon-box:after
+	// 		+animation-delay(5s)
+		
+	&.animated
+		.origin-polygonal .origin-txt-container .origin-txt-row .icon-box:after
+			+animation( dash-keyframes 1s ease 1 normal forwards )
+
+		.origin-polygonal .origin-txt-container .origin-txt-row
+
+			&:nth-child(n+0) .icon-box:after
+				+animation-delay(1s)
+
+			&:nth-child(n+1) .icon-box:after
+				+animation-delay(1.1s)
+
+			&:nth-child(n+2) .icon-box:after
+				+animation-delay(1.2s)
+
+			&:nth-child(n+3) .icon-box:after
+				+animation-delay(1.3s)
+
+			&:nth-child(n+4) .icon-box:after
+				+animation-delay(1.4s)
+
+			&:nth-child(n+5) .icon-box:after
+				+animation-delay(1.5s)
+
+
+
+//==============================================================
+
+.sprite
+	canvas
+		position: absolute
+		display: inline-block
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+
+	img
+		visibility: hidden
+
+
+section.fischer-news
+
+	.news-box
+		.reveal-mask
+			width: 214px
+			height: 214px
+			margin: 0
+			padding: 0
+			margin: 19px
+
+			img
+				width: 214px
+				height: 214px
+
+	.news-box.main-news-box
+		.thebadge
+			display: inline-block
+			position: relative
+			background: none
+			// background: url('../Content/Files/news/badge-atlas.png') no-repeat
+			// background-size: 0 0
+			// background: cyan
+			width: (110px)
+			height: (110px)
+			// // max-width: 220px
+			max-width: 110px
+			// // max-height: 220px
+			max-height: 110px
+			+transition(0s)
+			+transition-delay(0s)
+
+			.sprite
+
+				width: 110px
+				height: 110px
+
+				max-width: 110px
+				max-height: 110px
+
+			canvas
+				+transition(transform 0.8s )
+				+transition-delay(1.5s)
+				+transform( rotateZ(20deg) )
+
+	// 		&:after
+	// 			content: ''
+	// 			display: inline-block
+	// 			// width: 220px
+	// 			width: 100%
+	// 			// height: 220px
+	// 			height: 100%
+	// 			// background-position: 0.09033423667570009% 0.15037593984962405%
+	// 			// background-size: 603.1818181818181% 402.27272727272725%
+	// 			// background-size: (1332px / 2) (888px / 2)
+	// 			background-size: 666px 444px
+
+	// 			// background-size: 0 0
+	// 			background-image: url('../Files/news/badge-atlas.png')
+	// 			padding: 0
+	// 			margin: 0
+	// 			+transition(0s)
+	
+	// // +keyframes(badge-anim)
+	// // 	0%
+	// // 		background-position: 0.09033423667570009% 0.15037593984962405%
+	// // 	5%
+	// // 		background-position: 0.09033423667570009% 33.38345864661654%
+	// // 	10%
+	// // 		background-position: 0.09033423667570009% 66.61654135338345%
+	// // 	15%
+	// // 		background-position: 0.09033423667570009% 99.84962406015038%
+	// // 	20%
+	// // 		background-position: 20.05420054200542% 0.15037593984962405%
+	// // 	25%
+	// // 		background-position: 20.05420054200542% 33.38345864661654%
+	// // 	30%
+	// // 		background-position: 20.05420054200542% 66.61654135338345%
+	// // 	35%
+	// // 		background-position: 20.05420054200542% 99.84962406015038%
+	// // 	40%
+	// // 		background-position: 40.01806684733514% 0.15037593984962405%
+	// // 	45%
+	// // 		background-position: 40.01806684733514% 33.38345864661654%
+	// // 	50%
+	// // 		background-position: 40.01806684733514% 66.61654135338345%
+	// // 	55%
+	// // 		background-position: 40.01806684733514% 99.84962406015038%
+	// // 	60%
+	// // 		background-position: 59.98193315266486% 0.15037593984962405%
+	// // 	65%
+	// // 		background-position: 59.98193315266486% 33.38345864661654%
+	// // 	70%
+	// // 		background-position: 59.98193315266486% 66.61654135338345%
+	// // 	75%
+	// // 		background-position: 59.98193315266486% 99.84962406015038%
+	// // 	80%
+	// // 		background-position: 79.94579945799458% 0.15037593984962405%
+	// // 	85%
+	// // 		background-position: 79.94579945799458% 33.38345864661654%
+	// // 	90%
+	// // 		background-position: 79.94579945799458% 66.61654135338345%
+	// // 	95%
+	// // 		background-position: 79.94579945799458% 99.84962406015038%
+	// // 	100%
+	// // 		background-position: 99.9096657633243% 0.15037593984962405%
+	
+	// =bg-half($first, $second)
+	// 	background-position: ($first / 2) ($second / 2)
+
+	// +keyframes(badge-anim)
+	// 	0%
+	// 		+bg-half(1px, 1px )    
+	// 	5%
+	// 		+bg-half(1px, 223px )  
+	// 	10%
+	// 		+bg-half(1px, 445px )  
+	// 	15%
+	// 		+bg-half(1px, 667px )  
+	// 	20%
+	// 		+bg-half(223px, 1px )  
+	// 	25%
+	// 		+bg-half(223px, 223px )
+	// 	30%
+	// 		+bg-half(223px, 445px )
+	// 	35%
+	// 		+bg-half(223px, 667px )
+	// 	40%
+	// 		+bg-half(445px, 1px )  
+	// 	45%
+	// 		+bg-half(445px, 223px )
+	// 	50%
+	// 		+bg-half(445px, 445px )
+	// 	55%
+	// 		+bg-half(445px, 667px )
+	// 	60%
+	// 		+bg-half(667px, 1px )  
+	// 	65%
+	// 		+bg-half(667px, 223px )
+	// 	70%
+	// 		+bg-half(667px, 445px )
+	// 	75%
+	// 		+bg-half(667px, 667px )
+	// 	80%
+	// 		+bg-half(889px, 1px )  
+	// 	85%
+	// 		+bg-half(889px, 223px )
+	// 	90%
+	// 		+bg-half(889px, 445px )
+	// 	95%
+	// 		+bg-half(889px, 667px )
+	// 	100%
+	// 		+bg-half(1111px, 1px ) 
+
+	+keyframes(badge-rot)
+		0%
+			+transform( rotateZ(20deg) )
+		50%
+			+transform( rotateZ(0deg) )
+		100%
+			+transform( rotateZ(0deg) )
+
+
+	&.animated		
+		.news-box.main-news-box
+			.thebadge
+				canvas
+					+transform( rotateZ(0deg) )
+					// +animation( badge-rot 3s ease 1s forwards )
+
+
+			// .thebadge:after
+			// 	// background-size: 603.1818181818181% 402.27272727272725%
+			// 	// background-size: (1332px / 2) (888px / 2)
+			// 	background-size: 666px 444px
+			// 	// +bg-half(10px, 20px)
+			// 	+transition(0s)
+			// 	// +animation( badge-anim 3s steps(20, end) 0s 1 forwards )
+			// 	+animation( badge-anim 10s steps(20, end) forwards )
+
+
+
+
+
+
+
+//==============================================================
+
+section.fischer-tastes
+	.fischer-taste-container
+		.fischer-taste
+			.bg
+				display: block
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				pointer-events: none
+				+transition(opacity 0.3s)
+				opacity: 0
+				background-size: cover
+				background-position: center center
+				background-repeat: no-repeat
+
+			figcaption
+				z-index: 1
+
+			&:hover
+				.bg
+					opacity: 1
+
+
+
+
+//==============================================================
+
+
+.reveal-mask
+	display: inline-block
+	position: relative
+
+	img
+		visibility: hidden
+
+
+	canvas
+		display: inline-block
+		// position: relative
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+
+
+.tile
+	&.over 
+		.corners:before,  .corners:after
+			content: ''
+			background: #ebe9e5
+			display: inline-block
+			position: absolute
+
+	.corner-top-left, .corner-bottom-right
+		position: absolute
+		opacity: 0
+		+transition( all .4s ease-in-out )
+		pointer-events: none
+
+	&:not(.complete):hover 
+		.corner-top-left, .corner-bottom-right 
+			opacity: 1
+
+	&:not(.complete):hover .corner-top-left 
+		+transform( translate(23px, 23px) )
+
+	&:not(.complete):hover .corner-bottom-right 
+		+transform( translate(-23px, -23px) )
+
+
+	.corner-top-left
+		top: 0
+		left: 0
+
+	.corner-bottom-right
+		bottom: 0
+		right: 0
+
+	.corner-top-left:before, .corner-top-left:after, .corner-bottom-right:before, .corner-bottom-right:after 
+		content: ''
+		position: absolute
+		background: #ffffff
+
+	.corner-top-left:before, .corner-bottom-right:before
+		width: 12px
+		height: 2px
+
+
+	.corner-top-left:after, .corner-bottom-right:after
+		height: 12px
+		width: 2px
+
+	.corner-top-left:before, .corner-top-left:after
+		top: 0
+		left: 0
+
+	.corner-bottom-right:before, .corner-bottom-right:after
+		bottom: 0
+		right: 0
+
+
+
+
+#tile-game
+	display: block
+	position: absolute
+	// background: cyan
+
+	font-size: 0
+	width: 100%
+	height: 100vh
+
+	img
+		display: none
+
+	& > canvas
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+
+	.tile-wrapper
+		display: block
+		position: relative
+		width: 100%
+		height: 100%
+
+		&:before
+			content: ""
+			position: absolute
+			// top: -110%
+			top: -500%
+			// left: -210%
+			left: -500%
+			width: 200%
+			height: 200%
+			opacity: 0
+			transform: rotate(30deg)
+			pointer-events: none
+			z-index: 2
+
+			background: rgba(255, 255, 255, 0.13)
+			// background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%,	rgba(255, 255, 255, 0.13) 77%,	rgba(255, 255, 255, 0.5) 92%,	rgba(255, 255, 255, 0.0) 100%)
+			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,	rgba(255, 255, 255, 0.13) 77%,	rgba(255, 255, 255, 0.5) 92%,	rgba(255, 255, 255, 0.0) 100%)
+
+		canvas
+			display: inline-block
+			position: absolute
+			width: 100%
+			height: 100%
+			// border: 0px solid transparent
+			+transition(0.3s)
+			display: none
+
+			// .tile1, .tile2, .tile3
+			// 	top: 0
+
+			// .tile1, .tile2, .tile3
+			// 	top: 50%
+	
+
+		.tile
+			display: inline-block
+			position: absolute
+			cursor: pointer
+			cursor: hand
+			cursor: url('../Media/cursor-hand-white.png'), move
+			z-index: 1
+			pointer-events: all
+			+transition(0.3s ease)
+			overflow: hidden
+			// +transition-property(left  right  border  transform)
+
+
+
+			h3
+				display: inline-block
+				position: relative
+				left: 10px
+				top: 10px
+				font-size: 15px
+				color: white
+				font-family: sans-serif
+
+			&:before
+				content: ""
+				position: absolute
+				// top: -110%
+				top: -500%
+				// left: -210%
+				left: -500%
+				width: 200%
+				height: 200%
+				opacity: 0
+				transform: rotate(30deg)
+				pointer-events: none
+				z-index: 2
+
+				background: rgba(255, 255, 255, 0.13)
+				// background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%,	rgba(255, 255, 255, 0.13) 77%,	rgba(255, 255, 255, 0.5) 92%,	rgba(255, 255, 255, 0.0) 100%)
+				background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,	rgba(255, 255, 255, 0.13) 77%,	rgba(255, 255, 255, 0.5) 92%,	rgba(255, 255, 255, 0.0) 100%)
+
+			&.complete:before
+				opacity: 1
+				// top: -30%
+				top: 100%
+				// left: -30%
+				left: 100%
+				+transition-property( left  top  opacity )
+				+transition-duration( 0.7s, 0.7s, 0.15s )
+				+transition-timing-function( ease )
+
+			&:after
+				content: ''
+				pointer-events: none
+				display: block
+				position: absolute
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				border: 0px solid #987f5f
+				// +transition(0.3s)
+
+
+			&:not(.complete):hover:after
+				// left: 20px
+				// right: 20px
+				// top: 20px
+				// bottom: 20px
+				border-width: 10px
+
+			&:not(.complete):hover
+				z-index: 2
+				+transform(scale(1.02, 1.02))
+				+box-shadow( 0px 0px 88px -17px rgba(0,0,0,0.75) )
+
+
+		&.dragging
+			.tile:not(.active):not(.complete)
+				+transform(scale(0.99, 0.99))
+				// canvas
+				// 	// border: 1px solid transparent
+				// 	+transform(scale(0.99, 0.99))
+
+			.tile.active
+				+transition(0s)
+				z-index: 4
+				pointer-events: none
+				// +box-shadow( 0px 0px 125px 5px rgba(0,0,0,0.75) )
+
+				&:after
+					border-width: 10px
+
+			.tile:not(.complete):hover, .tile.active
+				// z-index: 3
+				+transform(scale(1.05, 1.05))
+				// +box-shadow( 0px 0px 125px 5px rgba(0,0,0,0.75) )
+				+box-shadow( 0px 0px 145px 15px rgba(0,0,0,0.75) )
+
+			.tile.swapping
+				pointer-events: none
+
+		&.complete
+			.tile
+				pointer-events: none
+
+				&:before
+					content: none
+
+			&:before
+				opacity: 1
+				// top: -30%
+				top: 100%
+				// left: -30%
+				left: 100%
+				+transition-property( left  top  opacity )
+				// +transition-duration( 0.7s, 0.7s, 0.15s )
+				+transition-duration( 1s, 1s, 0.15s )
+				+transition-timing-function( ease )
+
+
+body.resizing
+	#tile-game 
+		.tile-wrapper
+			canvas,	.tile
+				+transition(0s)
+
+
+//==================================
+//			Overrides
+//==================================
+
+
+section.origin
+	padding-top: 0
+
+	& > .wrapper
+		top: 118px
+		position: relative
+		z-index: 2
+
+
+

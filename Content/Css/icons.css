@@ -1,0 +1,101 @@
+.icon-emfialosi:before {
+    content: "\e90d";
+}
+.icon-orimansi:before {
+    content: "\e90e";
+}
+.icon-zimosi:before {
+    content: "\e90f";
+}
+.icon-boil:before {
+    content: "\e910";
+}
+.icon-vini2:before {
+    content: "\e911";
+}
+.icon-vini-big:before {
+    content: "\e916";
+}
+
+.icon-sound_off:before {
+    content: "\e90a";
+}
+.icon-hand:before {
+    content: "\e90b";
+}
+.icon-arrow-left:before {
+    content: "\e90c";
+}
+
+.icon-vini:before {
+    content: "\e909";
+}
+
+.icon-sound:before {
+    content: "\e908";
+}
+
+.icon-fischer-logo:before {
+    content: "\e907";
+}
+
+.icon-share:before {
+    content: "\e906";
+}
+
+.icon-close:before {
+    content: "\e905";
+}
+
+.icon-one .path1:before {
+    content: "\e903";
+    color: rgb(253, 252, 252);
+}
+.icon-one .path2:before {
+    content: "\e904";
+    margin-left: -0.6533203125em;
+    color: rgb(14, 14, 15);
+}
+.icon-saxophone:before {
+    content: "\e902";
+}
+.icon-arrow-right:before {
+    content: "\e900";
+}
+.icon-arrow-up:before {
+    content: "\e901";
+}
+.icon-camera:before {
+    content: "\e912";
+}
+.icon-caret-right:before {
+    content: "\e913";
+}
+.icon-caret-top:before {
+    content: "\e914";
+}
+.icon-cathedral:before {
+    content: "\e915";
+}
+.icon-four:before {
+    content: "\e99e";
+}
+.icon-half-circle-left:before {
+    content: "\e99f";
+}
+.icon-half-circle-right:before {
+    content: "\e9a0";
+}
+.icon-strasburg:before {
+    content: "\ea5e";
+}
+.icon-three:before {
+    content: "\ea5f";
+}
+.icon-ticket:before {
+    content: "\ea60";
+}
+.icon-two:before {
+    content: "\ea61";
+}
+
