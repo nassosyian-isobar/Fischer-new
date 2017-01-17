@@ -11,7 +11,8 @@ function check_if_in_viewport() {
 		var winHeight = $(window).height();
 
 		// if (cur_pos + winHeight >= $(this).offset().top + winHeight*0.2)
-		if (cur_pos + winHeight*0.5 >= $(this).offset().top)
+		// if (cur_pos + winHeight*0.5 >= $(this).offset().top)
+		if (cur_pos + winHeight*0.7 >= $(this).offset().top)
 		// if (cur_pos <= top && cur_pos + $(window).height() >= $(this).offset().top - $(window).height() * 0.2) 
 		{
 			$(this).addClass('animated');
@@ -72,6 +73,7 @@ var mainMenu = {
 	_this: this,
 	menuOpen: '.menu-open',
 	menuClose: '.menu-close',
+	menuSel: '#menu-icon',
 	openMenu: function(){
 		$('.nav-trigger').addClass('opened');
 		$('.main-nav').addClass('opened');
@@ -81,12 +83,20 @@ var mainMenu = {
 		$('.main-nav').removeClass('opened');
 	},
 	init: function(){
-		$('.menu-open').on('click', function(){
-			mainMenu.openMenu();
+		$('#menu-icon').on('click', function(){
+			if ( $(this).closest('.nav-trigger').hasClass('opened') )
+			{
+				mainMenu.closeMenu();
+			}
+			else
+			{
+				mainMenu.openMenu();
+			}
+
 		});
-		$('.menu-close').on('click', function(){
-			mainMenu.closeMenu();
-		});
+		// $('.menu-close').on('click', function(){
+		// 	mainMenu.closeMenu();
+		// });
 	}
 };
 

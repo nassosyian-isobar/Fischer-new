@@ -1546,3 +1546,30 @@
     }
 }
 
+
+/*   17-01-2017    */
+
+.mobile #menu-icon > #menu-animatic {
+    right: -230px;
+}
+
+.tablet #menu-icon > #menu-animatic {
+    right: -220px;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .beer-cans .cans-wrapper .beer-can img {
+        height: 200px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 640px)
+{
+    .origin-polygonal .origin-txt-container {
+        top: 50%;
+    }
+}

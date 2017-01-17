@@ -1225,8 +1225,13 @@ function setupMenuAnimatic()
 
 
 	menuAnim = bodymovin.loadAnimation(menuAnimData);
-	menuAnim.addEventListener('DOMLoaded',onLoad);
-	document.getElementById('menu-icon').onclick = toggleXanim;
+	// menuAnim.addEventListener('DOMLoaded',onLoad);
+	$(document).load(function()
+	{
+		onLoad();
+	});
+	// document.getElementById('menu-icon').onclick = toggleXanim;
+	$('#menu-icon').on('click', toggleXanim);
 
 	// function throwComplete(){
 	// 	isThrowing = false;

@@ -46,9 +46,10 @@ html(lang="el")
 		script(src="Scripts/Scripts/common.js")
 		script(src='Scripts/Libraries/jquery.unobtrusive-ajax.min.js')
 		.body-wrapper
-			#replaceMeAgeGate(data-value='True')
+			//- #replaceMeAgeGate(data-value='True')
+			#replaceMeAgeGate.open(data-value="False")
 				form#form0(action='/', data-ajax='true', data-ajax-mode='replace-with', data-ajax-update='#replaceMeAgeGate', data-ajax-url='/ajax/Isobar.Fischer.Frontend.Components.AgeGate.Index', method='post')
-					.lightbox.age-gating(data-lb-content='age-gating')
+					.lightbox.age-gating.open(data-lb-content='age-gating')
 						.lightbox-bg
 						.lightbox-container
 							.lightbox-content
@@ -75,17 +76,17 @@ html(lang="el")
 			span.nav-trigger
 				#menu-icon
 					#menu-animatic
-				span.menu-open
-					span.first
-					span.second
-					span.txt ΜΕΝΟΥ
+				//- span.menu-open
+				//- 	span.first
+				//- 	span.second
+				//- 	span.txt ΜΕΝΟΥ
 				// /menu-open
 				span.mobile-logo
 					a.mobile-logo-link(href='#')
 						h1
 							span.icon-cathedral
-				span.menu-close
-					span.icon-close
+				//- span.menu-close
+				//- 	span.icon-close
 				// /menu-close
 			// /nav-trigger
 			nav.main-nav
@@ -168,7 +169,8 @@ html(lang="el")
 					//- img(src='Content/Files/intro-game/fullpic.jpg' style="display:none")
 					.tile-wrapper
 						- for (var i = 0; i < 6; i++)
-							.tile(class="tile#{i+1}")
+							- var tilename = 'tile'+(i+1);
+							.tile(class=tilename)
 								.corner-top-left
 								.corner-bottom-right
 								// canvas
@@ -177,43 +179,43 @@ html(lang="el")
 					// #bodymovin-wrapper
 
 				.tiles-container
-					// .tiles-container-inner
-					// 	.tile-box(data-tile='0')
-					// 		.corner-top-left
-					// 		.corner-bottom-right
-					// 		figure.intro-game-tile(data-tile='0')
-					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/01.jpg', data-desktop-src='/Content/Files/intro-game/tiff/01.jpg', src='/Content/Files/intro-game/tiff/01.jpg', alt='')
-					// 	// /tile-box
-					// 	.tile-box(data-tile='1')
-					// 		.corner-top-left
-					// 		.corner-bottom-right
-					// 		figure.intro-game-tile(data-tile='1')
-					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/02.jpg', data-desktop-src='/Content/Files/intro-game/tiff/02.jpg', src='/Content/Files/intro-game/tiff/02.jpg', alt='')
-					// 	// /tile-box
-					// 	.tile-box(data-tile='2')
-					// 		.corner-top-left
-					// 		.corner-bottom-right
-					// 		figure.intro-game-tile(data-tile='2')
-					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/03.jpg', data-desktop-src='/Content/Files/intro-game/tiff/03.jpg', src='/Content/Files/intro-game/tiff/03.jpg', alt='')
-					// 	// /tile-box
-					// 	.tile-box(data-tile='3')
-					// 		.corner-top-left
-					// 		.corner-bottom-right
-					// 		figure.intro-game-tile(data-tile='3')
-					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/04.jpg', data-desktop-src='/Content/Files/intro-game/tiff/04.jpg', src='/Content/Files/intro-game/tiff/04.jpg', alt='')
-					// 	// /tile-box
-					// 	.tile-box(data-tile='4')
-					// 		.corner-top-left
-					// 		.corner-bottom-right
-					// 		figure.intro-game-tile(data-tile='4')
-					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/05.jpg', data-desktop-src='/Content/Files/intro-game/tiff/05.jpg', src='/Content/Files/intro-game/tiff/05.jpg', alt='')
-					// 	// /tile-box
-					// 	.tile-box(data-tile='5')
-					// 		.corner-top-left
-					// 		.corner-bottom-right
-					// 		figure.intro-game-tile(data-tile='5')
-					// 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/06.jpg', data-desktop-src='/Content/Files/intro-game/tiff/06.jpg', src='/Content/Files/intro-game/tiff/06.jpg', alt='')
-					// 	// /tile-box
+					//- // .tiles-container-inner
+					//- // 	.tile-box(data-tile='0')
+					//- // 		.corner-top-left
+					//- // 		.corner-bottom-right
+					//- // 		figure.intro-game-tile(data-tile='0')
+					//- // 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/01.jpg', data-desktop-src='/Content/Files/intro-game/tiff/01.jpg', src='/Content/Files/intro-game/tiff/01.jpg', alt='')
+					//- // 	// /tile-box
+					//- // 	.tile-box(data-tile='1')
+					//- // 		.corner-top-left
+					//- // 		.corner-bottom-right
+					//- // 		figure.intro-game-tile(data-tile='1')
+					//- // 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/02.jpg', data-desktop-src='/Content/Files/intro-game/tiff/02.jpg', src='/Content/Files/intro-game/tiff/02.jpg', alt='')
+					//- // 	// /tile-box
+					//- // 	.tile-box(data-tile='2')
+					//- // 		.corner-top-left
+					//- // 		.corner-bottom-right
+					//- // 		figure.intro-game-tile(data-tile='2')
+					//- // 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/03.jpg', data-desktop-src='/Content/Files/intro-game/tiff/03.jpg', src='/Content/Files/intro-game/tiff/03.jpg', alt='')
+					//- // 	// /tile-box
+					//- // 	.tile-box(data-tile='3')
+					//- // 		.corner-top-left
+					//- // 		.corner-bottom-right
+					//- // 		figure.intro-game-tile(data-tile='3')
+					//- // 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/04.jpg', data-desktop-src='/Content/Files/intro-game/tiff/04.jpg', src='/Content/Files/intro-game/tiff/04.jpg', alt='')
+					//- // 	// /tile-box
+					//- // 	.tile-box(data-tile='4')
+					//- // 		.corner-top-left
+					//- // 		.corner-bottom-right
+					//- // 		figure.intro-game-tile(data-tile='4')
+					//- // 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/05.jpg', data-desktop-src='/Content/Files/intro-game/tiff/05.jpg', src='/Content/Files/intro-game/tiff/05.jpg', alt='')
+					//- // 	// /tile-box
+					//- // 	.tile-box(data-tile='5')
+					//- // 		.corner-top-left
+					//- // 		.corner-bottom-right
+					//- // 		figure.intro-game-tile(data-tile='5')
+					//- // 			img(data-mob-img='/Content/Files/intro-game/tiff/mobile/06.jpg', data-desktop-src='/Content/Files/intro-game/tiff/06.jpg', src='/Content/Files/intro-game/tiff/06.jpg', alt='')
+					//- // 	// /tile-box
 					span.skip
 						span SKIP
 					// HOMEPAGE AUDIO
@@ -669,29 +671,29 @@ html(lang="el")
 		script(src='Scripts/Libraries/radial-indicator.js')
 		script(src='Scripts/Scripts/homepage.js')
 		script(src='Scripts/Scripts/tilegame.js')
+		//- script.
+		//- 	closeAgeGating();
 		script.
-			closeAgeGating();
-		// script.
-		// 	function HideDescription() {
-		// 		setTimeout(function() {
-		// 			$('.game-msg').addClass("hidden");
-		// 		}, 2000);
-		// 	}
-		// 	var userHasPlayed = getCookie('userHasPlayed') === 'true';
-		// 	$(function() {
-		// 		$('body').on('click', '.intro-game .skip', function() {
-		// 			userHasPlayed = true;
-		// 			setCookie('userHasPlayed', true);
-		// 			$('.game-msg').fadeOut('slow');
-		// 		});
-		// 		if (userHasPlayed) {
-		// 			$('.game-msg').addClass("hidden");
-		// 			$('#audioPlayer .controls-stop').trigger('click');
-		// 			setTimeout(function() {
-		// 				$('.intro-game .skip').trigger('click');
-		// 			}, 400);
-		// 		}
-		// 		HideDescription();
-		// 	});
+			function HideDescription() {
+				setTimeout(function() {
+					$('.game-msg').addClass("hidden");
+				}, 2000);
+			}
+			var userHasPlayed = getCookie('userHasPlayed') === 'true';
+			$(function() {
+				$('body').on('click', '.intro-game .skip', function() {
+					userHasPlayed = true;
+					setCookie('userHasPlayed', true);
+					$('.game-msg').fadeOut('slow');
+				});
+				if (userHasPlayed) {
+					$('.game-msg').addClass("hidden");
+					$('#audioPlayer .controls-stop').trigger('click');
+					setTimeout(function() {
+						$('.intro-game .skip').trigger('click');
+					}, 400);
+				}
+				HideDescription();
+			});
 		script.
 			$('#replaceMe form').attr('novalidate', "novalidate");
